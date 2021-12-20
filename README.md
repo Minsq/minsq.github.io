@@ -1,0 +1,1 @@
+# minsq.github.io
