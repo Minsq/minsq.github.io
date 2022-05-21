@@ -1,7 +1,8 @@
 ---
 layout: post
-categories: digital_art
-filename: banana.jpg
+title: Publish using Github Pages
+categories: programming
+filename: github-pages.png
 ---
 
 

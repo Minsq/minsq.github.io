@@ -10,12 +10,15 @@ layout: default
             About myself<br />
             <!--magna sed accumsan arcu neque.</h2>-->
     </header>
-    <p>
-        Portfolio projects on data, machine learning, web scraping, 
-        web development, natural language processing and more.
-    </p>
+    <p>Compliance, data, fintech, web3 and art?</p>
+
+    <p>Can't settle on one thing yet, because there is so much to learn! </p>
+       <!--  Portfolio projects on data, machine learning, web scraping,
+        web development, natural language processing and more.  -->
+
+    
     <ul class="actions buttonRight">
-        <li><a href="#three" class="button smooth-goto">Contact me</a></li>
+        <li><a href="#contact" class="button smooth-goto">Contact me</a></li>
     </ul>
 </section>
 
@@ -28,7 +31,17 @@ layout: default
         <article class="col-6 col-12-xsmall work-item">
             <a href="{{ post.url }}" class="image fit thumb"><img src="/assets/images/posts/{{ post.filename }}" alt="" /></a>
 
-            <h3>{{ post.title }}</h3><p>{{ post.categories }}</p>
+            <h3>{{ post.title }}</h3>
+
+            <h6 style="display:inline"><a href="#" class="badge badge-primary"> {{ post.categories }} </a></h6>
+
+       
+            <!--{% assign all_categories = post.categories | split: ',' %}
+ 
+            {% for cat in all_categories %}
+            <h6 style="display:inline"><a href="#" class="badge badge-warning"> {{ cat }}</a></h6>
+            {% endfor %}-->
+
 
         </article>
         {% endfor %}
@@ -36,12 +49,12 @@ layout: default
     </div>
 </section>
 
-<!-- Three -->
-<section id="three">
+<!-- Contact -->
+<section id="contact">
     <h2>Get In Touch</h2>
-    <p>Accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque lorem ipsum dolor.</p>
+    <p> </p>
     <div class="row">
-        <div class="col-8 col-12-small">
+        <div class="col-12 col-12-small">
             <form method="post" action="#">
                 <div class="row gtr-uniform gtr-50">
                     <div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
@@ -53,26 +66,26 @@ layout: default
                 <li><input type="submit" value="Send Message" /></li>
             </ul>
         </div>
-        <div class="col-4 col-12-small">
+        <!-- <div class="col-4 col-12-small">
             <ul class="labeled-icons">
                 <li>
                     <h3 class="icon solid fa-home"><span class="label">Address</span></h3>
                     Singapore
                 </li>
-                <!--<li>
+                <li>
                     <h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3>
                     -
-                </li>-->
+                </li>
                 <li>
                     <h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
                     <a href="#">xxx@gmail.com</a>
                 </li>
             </ul>
-        </div>
+        </div> -->
     </div>
 </section>
 
-<ul class="actions buttonRight" >
+<ul class="actions buttonRight">
     <li><a href="/#" class="button">Back to top</a></li>
 </ul>
 
