@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Digital watercolor as a form of therapy
+title: Digital watercolor as a form of therapy during the pandemic
 categories: digital art
 filename: covid-reflections.jpg
 ---
