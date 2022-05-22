@@ -24,7 +24,7 @@ It was a good platform to start.
 
 <figure  style="text-align: center;">
 	<img src="/assets/images/posts/covid-reflections.jpg" alt="drawing" width="500" style="border-radius: 15px"/>
-	<figcaption><em>View from my COVID stay at Dorsett Hotel Singapore</em></figcaption>
+	<figcaption><em>View from my covid isolation facility at Dorsett Hotel Singapore</em></figcaption>
 </figure>
 
 <!-- ![alt text](/assets/images/posts/cappacdocia-horses.jpg){ width=50% } -->
