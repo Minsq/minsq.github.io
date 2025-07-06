@@ -33,19 +33,25 @@ It was tedious but more fun than expected. I played around with the different pe
 
 ### This was my end result
 
-<figure  style="text-align: center;">
-	<img src="/assets/images/posts/covid-reflections.jpg" alt="drawing" width="500" style="border-radius: 15px"/>
-	<figcaption><em>View from my covid isolation facility at Dorsett Hotel Singapore</em></figcaption>
-</figure>
+{% include post_image.html
+filename="covid-reflections.jpg"
+alt_text="A vibrant digital watercolor painting"
+width="500"
+caption="View from my covid isolation facility at Dorsett Hotel Singapore"
+%}
+
 
 I was really happy with it, going with the flow with the shading and colors. Although there were no pink-purple hues, I guess the peaceful blue-turquoise skies would make do for now.
 
 I tried a similar technique using a picture taken during a horse riding experience in Turkey. I finally got my pinkish hues in, so I was happy with that :)
 
-<figure  style="text-align: center;">
-	<img src="/assets/images/posts/cappacdocia-horses.jpg" alt="drawing" width="500" style="border-radius: 15px"/>
-	<figcaption><em>Touring Cappadocia's valleys on horses</em></figcaption>
-</figure>
+
+{% include post_image.html
+filename="cappacdocia-horses.jpg"
+alt_text="A vibrant digital watercolor painting"
+width="500"
+caption="Touring Cappadocia's valleys on horses"
+%}
 
 
 ### Peace out

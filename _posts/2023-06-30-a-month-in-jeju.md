@@ -34,7 +34,7 @@ With reliable high-speed internet available throughout the island, I was able to
 A Culinary Journey: Indulging in Jeju's Flavors
 Jeju's culinary scene is a feast for the senses. I savored:
 
-- lack Pork: A local specialty, known for its rich flavor and tenderness.
+- Black Pork: A local specialty, known for its rich flavor and tenderness.
 - Fresh Seafood: From grilled fish to succulent seafood bibimbap, the island offers an abundance of delicious seafood options.
 - Local Specialties: I also enjoyed trying unique dishes like Jeju horse meat and seafood pancakes.
 
