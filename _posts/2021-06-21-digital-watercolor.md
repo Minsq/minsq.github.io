@@ -40,7 +40,6 @@ width="500"
 caption="View from my covid isolation facility at Dorsett Hotel Singapore"
 %}
 
-
 I was really happy with it, going with the flow with the shading and colors. Although there were no pink-purple hues, I guess the peaceful blue-turquoise skies would make do for now.
 
 I tried a similar technique using a picture taken during a horse riding experience in Turkey. I finally got my pinkish hues in, so I was happy with that :)

@@ -1,6 +1,10 @@
+
 <figure style="text-align: center;">
+
 <img src="/assets/images/posts/{{ page.date | date: '%Y-%m-%d-' | append: page.slug | append: '/' | append: include.filename }}"
 alt="{{ include.alt_text | default: 'Image' }}"
 {% if include.width %}width="{{ include.width }}"{% endif %}
 style="border-radius: 15px; max-width: 100%; height: auto; {% if include.style %}{{ include.style }}{% endif %}"/>
 <figcaption>{% if include.caption %}<em>{{ include.caption }}</em>{% endif %}
+</figcaption>
+</figure>
