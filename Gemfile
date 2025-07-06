@@ -30,3 +30,7 @@ gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
 
 # Download bootstrap
 gem 'bootstrap', '~> 5.1.3'
+
+gem 'jekyll-archives'
+# Emoji
+# gem 'jemoji'

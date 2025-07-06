@@ -229,6 +229,11 @@ input, select, textarea {
 			overflow-x: auto;
 		}
 
+/* Start of my own */
+
+
+/* End of my own */
+
 	.align-left {
 		text-align: left;
 	}
@@ -2106,7 +2111,7 @@ input, select, textarea {
 			border-radius: 0.35em;
 			display: block;
 		}
-		
+
 
 		.image.left {
 			float: left;
@@ -2372,7 +2377,7 @@ input, select, textarea {
 		}
 
 .buttonRight {
-	display: flex; 
+	display: flex;
 	justify-content:flex-end
 }
 
@@ -3238,3 +3243,88 @@ input, select, textarea {
 			}
 
 	}
+
+
+
+/* Add on */
+
+/* --- Styles for the TOC/Categories List in the fixed sidebar --- */
+#sidebar-toc-container {
+  margin-top: 20px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+#sidebar-toc-container h4 {
+  font-size: 1em;
+  color: #fff;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.8;
+
+  position: relative;
+  padding-bottom: 8px;
+
+/* remove the short horizontal line */
+  /* &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 1px;
+  } */
+}
+
+#dynamic-toc-target {
+  border-left: 2px solid rgba(255, 255, 255, 0.15);
+  padding-left: 10px;
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+
+  li {
+    margin-bottom: 3px; /* REDUCED SPACING: Back to a smaller value */
+    line-height: 1.3; /* Adjusted line-height for compactness */
+    font-size: 0.9em;
+  }
+
+  li a {
+    color: rgba(255, 255, 255, 0.65);
+    text-decoration: none;
+    display: block;
+    padding: 4px 6px;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      color: #fff;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 4px;
+    }
+  }
+
+  /* // Styles for nested items (H3, H4) */
+  li ul {
+    padding-left: 15px;
+    margin-top: 3px; /* Smaller margin for nested lists */
+  }
+
+  li ul li {
+    font-size: 0.85em;
+    margin-bottom: 3px; /* Smaller margin for nested list items */
+  }
+
+  li ul li a {
+    color: rgba(255, 255, 255, 0.5);
+    padding: 3px 5px;
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.08);
+    }
+  }
+}

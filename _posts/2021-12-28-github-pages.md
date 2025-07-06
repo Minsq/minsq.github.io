@@ -1,10 +1,15 @@
 ---
 layout: post
 title: Publishing my portfolio blog using Github Pages and Jekyll
-categories: programming
-filename: github-pages.png
+categories: coding
+filename: /coding/github-pages.png
 ---
 
+<div id="temp-toc-placeholder" style="display:none;">
+<h4>On This Page</h4>
+* TOC
+{:toc}
+</div>
 
 ### How it started
 It has been 4 years since graduation from college and I felt a little guilty for not spending time to pen down my portfolios :cry-laugh:.
@@ -30,6 +35,4 @@ There are many sites out there that details how to publish a blog on Github page
 On whether to use the free templates from Jekyll or HTML5, the Jekyll templates can be more straight forward in terms of setting up your blog, compared to the HTML5 templates where you would need to know how to change it to suit the Jekyll templating format. Notwithstanding that, I find using HTML5 templates a good way to learn how to use Jekyll. For info, I used the [Strata](https://html5up.net/strata) template from HTML5.
 
 ### Conclusion
-I'm happy with being able to set up a [portfolio site](https://minsq.github.io/) to share my work.
-
 Hope it helps and please reach out if you have any questions~~

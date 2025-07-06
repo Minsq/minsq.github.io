@@ -2,59 +2,83 @@
 layout: default
 
 ---
+<!-- travel, life, videos affiliate, tips -->
+<section id="buttons">
 
-<!-- One -->
-<section id="one">
-    <header class="major">
-        <h2>
-            About myself<br />
-            <!--magna sed accumsan arcu neque.</h2>-->
-    </header>
-    <p>Compliance, data, fintech, web3 and art?</p>
+    <h1>Forward to Categories</h1>
+    {% for category in site.categories %}
 
-    <p>Can't settle on one thing yet, because there is so much to learn! </p>
-       <!--  Portfolio projects on data, machine learning, web scraping,
-        web development, natural language processing and more.  -->
+      <a href="#{{ category | first }}" class="button is-primary is-large">
+          <span class="icon"><i class="fas fa-rainbow"></i></span>
+          <span>{{ category | first }}</span>
+      </a>
+    {% endfor %}
+    <br><br>
+    <a href="#Archive" class="button is-primary is-large" style="float: right;">
+      <span class="icon"><i class="fa fa-archive"></i></span>
+      <span>Go to Archive</span>
+    </a>
 
-    
-    <ul class="actions buttonRight">
-        <li><a href="#contact" class="button smooth-goto">Contact me</a></li>
+</section>
+
+
+<section id="gallery">
+    <h1>Gallery</h1>
+
+    {% for category in site.categories %}
+      <h2 id="{{ category | first }}">{{ category | first | capitalize }}</h2>
+      <div class="row">
+        {% assign selected_category = category | first %}
+        {% for post in site.categories[selected_category] %}
+              <article class="col-6 col-12-xsmall work-item">
+                  <a href="{{ post.url }}" class="image fit thumb"><img src="/assets/images/posts/{{ post.filename }}" alt="" /></a>
+
+                  <h3>{{ post.title }}</h3>
+
+                  {% for category in post.categories %}
+
+                    <h6 style="display:inline"><a href="#" class="badge badge-primary"> {{ category | capitalize }} </a></h6>
+                  {% endfor %}
+
+              </article>
+          <!-- <li><a href="{{ post.url }}">{{ post.title }}</a></li> -->
+
+          {% endfor %}
+      </div>
+    {% endfor %}
+
+</section>
+
+<section id = 'Archive'>
+  <h1>Archive of posts from {{ site.posts.date | date: "%Y" }}</h1>
+    <ul class="posts">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <span class="post-category_name">{{ post.categories | join: ", " | capitalize }}</span>
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
     </ul>
 </section>
 
-<!-- Two -->
-<section id="two">
-    <h2>My Projects</h2>
-    <div class="row">
 
-        {% for post in site.posts %}
-        <article class="col-6 col-12-xsmall work-item">
-            <a href="{{ post.url }}" class="image fit thumb"><img src="/assets/images/posts/{{ post.filename }}" alt="" /></a>
-
-            <h3>{{ post.title }}</h3>
-
-            <h6 style="display:inline"><a href="#" class="badge badge-primary"> {{ post.categories }} </a></h6>
-
-       
-            <!--{% assign all_categories = post.categories | split: ',' %}
- 
-            {% for cat in all_categories %}
-            <h6 style="display:inline"><a href="#" class="badge badge-warning"> {{ cat }}</a></h6>
-            {% endfor %}-->
-
-
-        </article>
-        {% endfor %}
-
-    </div>
-</section>
-
-<!-- Contact -->
+<!-- Change to google form -->
 <section id="contact">
     <h2>Get In Touch</h2>
     <p> </p>
     <div class="row">
-        <div class="col-12 col-12-small">
+        <a href="#" class="button is-primary is-large">
+            <span class="icon"><i class="fa fa-bell"></i></span>
+            <span>View Products (Coming soon)</span>
+        </a>
+        <br><br>
+        <a href="https://forms.gle/qYoEskLcLYYvgeCn6" target="_blank" class="button is-primary is-large">
+            <span class="icon"><i class="fas fa-calendar-alt"></i></span>
+            <span>Collaboration</span>
+        </a>
+
+        <!-- <div class="col-12 col-12-small">
             <form method="post" action="#">
                 <div class="row gtr-uniform gtr-50">
                     <div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
@@ -65,23 +89,8 @@ layout: default
             <ul class="actions buttonRight">
                 <li><input type="submit" value="Send Message" /></li>
             </ul>
-        </div>
-        <!-- <div class="col-4 col-12-small">
-            <ul class="labeled-icons">
-                <li>
-                    <h3 class="icon solid fa-home"><span class="label">Address</span></h3>
-                    Singapore
-                </li>
-                <li>
-                    <h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3>
-                    -
-                </li>
-                <li>
-                    <h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
-                    <a href="#">xxx@gmail.com</a>
-                </li>
-            </ul>
         </div> -->
+
     </div>
 </section>
 
@@ -97,3 +106,6 @@ layout: default
     });
 
 </script>
+
+<!-- https://github.com/danhixon/danhixon.github.com -->
+<!-- https://blog.webjeda.com/jekyll-categories/ -->

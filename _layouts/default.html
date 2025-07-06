@@ -4,7 +4,7 @@
 
 <html>
 <head>
-    <title>Violet</title>
+    <title>InkEatWonder</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="/assets/css/main.css" />
@@ -16,19 +16,46 @@
 
     <!-- Header -->
     <header id="header">
+
         <div class="inner">
             <a href="/" class="image avatar"><img src="/assets/images/iew-photo.jpg" alt="" /></a>
             <h1><strong>Violet Huang</strong> </h1>
+            <h1>InkEatWonder<br /></h1>
             <h1>Singapore<br /></h1>
-
             <p><em>Travel, Nature, and Musings on Life</em></p>
 
+            <hr>
+             <!-- {# A container for the TOC within the fixed sidebar #} -->
+            <div id="sidebar-toc-container">
+              <h4>On This Page</h4>
+              <nav id="dynamic-toc-target">
+                <p style="font-size: 0.9em; color: #aaa;">No sections found.</p>
+              </nav>
+            </div>
+
+            <!-- categories -->
+            <div id="fallback-categories" style="display:none;">
+             <h4>Browse Categories</h4>
+             <nav>
+               <ul>
+               {% for category in site.categories %}
+                   <li><a href="#{{ category | first }}"><span class="icon"><i class="fas fa-rainbow"></i></span>
+                     <span>{{ category | first }}</span>
+                   </a></li>
+               {% endfor %}
+               </ul>
+             </nav>
+           </div>
 
         </div>
+
+
+
     </header>
 
     <!-- Main -->
     <div id="main">
+
 
         {{ content }}
 
@@ -62,5 +89,67 @@
     <script src="/assets/js/main.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const tempTocContainer = document.getElementById('temp-toc-placeholder'); // From markdown posts
+        let generatedTocList = null;
+
+        if (tempTocContainer) {
+          generatedTocList = tempTocContainer.querySelector('ul');
+        }
+
+        const sidebarTocTarget = document.getElementById('dynamic-toc-target');
+        const sidebarContainer = document.getElementById('sidebar-toc-container');
+        const fallbackCategoriesContainer = document.getElementById('fallback-categories'); // New: the hidden categories div
+
+        if (sidebarTocTarget) { // Ensure the target for TOC/categories exists
+            if (generatedTocList) {
+                // Scenario 1: A TOC was generated in the post
+                sidebarTocTarget.innerHTML = '';
+                sidebarTocTarget.appendChild(generatedTocList);
+                tempTocContainer.remove(); // Clean up the hidden placeholder
+
+                // Revert h4 heading to "On This Page" in case it was changed
+                const h4Element = sidebarContainer ? sidebarContainer.querySelector('h4') : null;
+                if (h4Element) {
+                    h4Element.textContent = 'On This Page';
+                    h4Element.style.display = ''; // Ensure visible
+                }
+                if (sidebarContainer) {
+                    sidebarContainer.style.display = ''; // Ensure sidebar is visible
+                }
+
+            } else {
+                // Scenario 2: No TOC generated, so show categories as fallback
+                if (fallbackCategoriesContainer) {
+                    sidebarTocTarget.innerHTML = ''; // Clear "No sections found"
+                    // Clone the content of fallback categories container and append
+                    // We get the <nav> element from inside fallback-categories
+                    const clonedCategoriesNav = fallbackCategoriesContainer.querySelector('nav').cloneNode(true);
+                    if (clonedCategoriesNav) {
+                        sidebarTocTarget.appendChild(clonedCategoriesNav);
+                    }
+
+                    // Update the h4 heading to "Browse Categories"
+                    const h4Element = sidebarContainer ? sidebarContainer.querySelector('h4') : null;
+                    if (h4Element) {
+                        h4Element.textContent = 'Browse Categories';
+                        h4Element.style.display = ''; // Ensure visible
+                    }
+                    if (sidebarContainer) {
+                        sidebarContainer.style.display = ''; // Ensure sidebar is visible
+                    }
+
+                } else {
+                    // Scenario 3: No TOC and no fallback categories (unlikely if fallbackCategoriesContainer exists in HTML)
+                    // Hide the entire sidebar-toc-container if nothing to display
+                    if (sidebarContainer) {
+                        sidebarContainer.style.display = 'none';
+                    }
+                }
+            }
+        }
+      });
+    </script>
 </body>
 </html>

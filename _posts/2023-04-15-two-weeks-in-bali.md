@@ -1,16 +1,16 @@
 ---
 layout: post
 title: Ubud - A Digital Nomad's Sweet Escape (and Challenges)
-categories: Travel
-filename: github-pages.png
+categories:
+- remote-work
+filename: /travel/2023-04-15-bali.jpg
 ---
 
-### Table of contents
- - [Overview](#overview)
- - [Payments](#payments)
- - [Wifi](#wifi-network)
- - [Food](#food)
- - [Experiences](#experiences)
+<div id="temp-toc-placeholder" style="display:none;">
+<h4>On This Page</h4>
+* TOC
+{:toc}
+</div>
 
 
 ### Overview: Digital Nomad Life: Ubud Edition
@@ -45,6 +45,7 @@ Let me tell you about some of the amazing experiences I had:
 3. Campuhan Ridge Walk: We attempted this on one of the mornings before starting work as it's near Ubud city. The walk was incredibly scenic, with stunning rice terraces on one side and lush jungle on the other. It was the perfect way to start the day.
 4. Jatiluwih Rice Terraces: This was a photographer's dream! The terraced rice fields were endless, and the view was simply stunning. It was like stepping into a postcard. Good workout too!
 5. Tegenungan Waterfall: A refreshing oasis amidst the heat. The waterfall was powerful and beautiful, and the surrounding area was lush and green. It was the perfect place to cool off after a day of exploring.
+6. Monkey forest Ubud: A nature reserve and temple complex in Ubud, home to over 1260 long-tailed macaques, who are incredibly playful and mischievous.
 
 ### Conclusion
 Ubud truly exceeded my expectations. It's a place where you can immerse yourself in nature, indulge in delicious food, and experience the warmth of Balinese hospitality. From the thrill of white water rafting to the serenity of the Campuhan Ridge Walk, there's something for everyone.
