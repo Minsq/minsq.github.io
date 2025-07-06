@@ -5,15 +5,7 @@ layout: default
 <!-- travel, life, videos affiliate, tips -->
 <section id="buttons">
 
-    <h1>Forward to Categories</h1>
-    {% for category in site.categories %}
 
-      <a href="#{{ category | first }}" class="button is-primary is-large">
-          <span class="icon"><i class="fas fa-rainbow"></i></span>
-          <span>{{ category | first }}</span>
-      </a>
-    {% endfor %}
-    <br><br>
     <a href="#Archive" class="button is-primary is-large" style="float: right;">
       <span class="icon"><i class="fa fa-archive"></i></span>
       <span>Go to Archive</span>
@@ -56,7 +48,7 @@ layout: default
       <li>
         <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
         <span class="post-category_name">{{ post.categories | join: ", " | capitalize }}</span>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        <a class="post-link" href="{{ post.url }}">{{ post.title }}</a>
       </li>
     {% endfor %}
     </ul>
